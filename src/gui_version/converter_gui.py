@@ -2,7 +2,10 @@ from tkinter import *
 from tkinter import messagebox
 import pyperclip
 
-currencies = ["USD", "EUR", "PLN", "GBP", "JPY"]
+currencies = []
+
+def import_currencies():
+
 
 def currency_converter():
     user_amount = money_texbox.get()
@@ -20,7 +23,7 @@ canvas = Canvas(width=200, height=200)
 canvas.grid(column=0, row=0, columnspan=3)
 
 # adding logo image in center
-logo_image = PhotoImage(file="gui_version/logo.png")
+logo_image = PhotoImage(file="logo.png")
 logo_image = logo_image.subsample(3,3)
 canvas.create_image(100,100, image=logo_image)
 canvas.grid(column=1,row=0)
